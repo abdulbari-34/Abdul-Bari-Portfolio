@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheraz — Web Developer & AI Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Sheraz<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀</span>
+          <span class="theme-icon moon">◐</span>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for projects
+      </div>
+      <h1 class="hero-title reveal">
+        I Build & Launch<br />
+        <span class="hero-typed-wrapper">
+          <span class="hero-typed" id="heroTyped"></span>
+          <span class="typed-cursor">|</span>
+        </span><br />
+        <span class="hero-gradient">In 48 Hours.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        CS student turned execution machine. I turn business ideas into live, converting websites
+        using AI-powered workflows — fast, modern, and built to grow.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#projects" class="btn-primary">
+          <span>View My Work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost">Start a Project</a>
+      </div>
+      <div class="hero-scroll-hint reveal">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-card-3d" id="heroCard">
+        <div class="card-face">
+          <div class="card-terminal">
+            <div class="terminal-bar">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+              <span class="t-title">build.sh</span>
+            </div>
+            <div class="terminal-body">
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">init project client-site</span></div>
+              <div class="t-line t-delay-1"><span class="t-prompt">$</span> <span class="t-cmd">ai design --premium</span></div>
+              <div class="t-line t-delay-2"><span class="t-success">✓</span> <span class="t-text">UI generated in 2.3s</span></div>
+              <div class="t-line t-delay-3"><span class="t-prompt">$</span> <span class="t-cmd">deploy --production</span></div>
+              <div class="t-line t-delay-4"><span class="t-success">✓</span> <span class="t-text">Live at client.com</span></div>
+              <div class="t-line t-delay-5"><span class="t-success">🚀</span> <span class="t-text">Delivered in 48h</span></div>
+            </div>
+          </div>
+          <div class="card-stat-row">
+            <div class="card-stat">
+              <span class="cs-num">48h</span>
+              <span class="cs-label">Avg Delivery</span>
+            </div>
+            <div class="card-stat">
+              <span class="cs-num">20+</span>
+              <span class="cs-label">Sites Live</span>
+            </div>
+            <div class="card-stat">
+              <span class="cs-num">100%</span>
+              <span class="cs-label">Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item reveal-up">
+        <span class="trust-num" data-count="20">0</span><span class="trust-plus">+</span>
+        <span class="trust-label">Websites Built</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal-up">
+        <span class="trust-num">48</span><span class="trust-plus">h</span>
+        <span class="trust-label">Average Delivery</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal-up">
+        <span class="trust-num" data-count="100">0</span><span class="trust-plus">%</span>
+        <span class="trust-label">Mobile-First</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal-up">
+        <span class="trust-num">AI</span>
+        <span class="trust-label">Powered Workflow</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Not Just a Developer.<br /><span class="gradient-text">A Launch Machine.</span></h2>
+          <p class="about-body">
+            I'm a Computer Science student with one obsession: building and shipping fast. While others talk, I execute. Using AI tools and modern workflows, I compress weeks of work into hours — delivering clean, converting websites that actually drive results.
+          </p>
+          <p class="about-body">
+            I specialize in helping small businesses and founders get their digital presence live without the slow agency timelines. Idea in. Live product out.
+          </p>
+          <div class="about-badges">
+            <span class="badge">🎓 CS @ MNSUAM</span>
+            <span class="badge">⚡ AI-Powered Builder</span>
+            <span class="badge">🚀 Rapid Execution</span>
+            <span class="badge">📦 Digital Products</span>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="about-visual">
+            <div class="av-card glass-card">
+              <div class="av-header">
+                <div class="av-avatar">S</div>
+                <div>
+                  <div class="av-name">Muhammad Sheeraz</div>
+                  <div class="av-role">Web Dev & AI Builder</div>
+                </div>
+                <div class="av-status"><span class="status-dot"></span>Open to work</div>
+              </div>
+              <div class="av-stack">
+                <div class="stack-label">Current Stack</div>
+                <div class="stack-tags">
+                  <span>HTML/CSS</span><span>JavaScript</span><span>Node.js</span>
+                  <span>MongoDB</span><span>Vercel</span><span>AI Tools</span>
+                </div>
+              </div>
+              <div class="av-bar-wrap">
+                <div class="av-bar-label">
+                  <span>Projects Delivered</span><span>20+</span>
+                </div>
+                <div class="av-bar">
+                  <div class="av-bar-fill" style="--w:85%"></div>
+                </div>
+              </div>
+              <div class="av-bar-wrap">
+                <div class="av-bar-label">
+                  <span>Client Satisfaction</span><span>100%</span>
+                </div>
+                <div class="av-bar">
+                  <div class="av-bar-fill" style="--w:100%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="av-float-badge glass-card">
+              <span>⚡</span> Built with AI · Shipped in 48h
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Tools & Skills</div>
+        <h2 class="section-title">The Arsenal That<br /><span class="gradient-text">Gets Things Done</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">⚡</div>
+          <h3>Frontend Dev</h3>
+          <p>HTML5, CSS3, JavaScript — pixel-perfect, responsive, fast.</p>
+          <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </div>
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">🔧</div>
+          <h3>Backend & APIs</h3>
+          <p>Node.js, Express, MongoDB, JWT auth, REST APIs that scale.</p>
+          <div class="skill-tags"><span>Node.js</span><span>MongoDB</span><span>JWT</span></div>
+        </div>
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">🤖</div>
+          <h3>AI Workflows</h3>
+          <p>Claude, ChatGPT, n8n automation — 10x speed, same quality.</p>
+          <div class="skill-tags"><span>Claude AI</span><span>n8n</span><span>Automation</span></div>
+        </div>
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">🚀</div>
+          <h3>Deployment</h3>
+          <p>Vercel, Railway, domain setup — from localhost to live in minutes.</p>
+          <div class="skill-tags"><span>Vercel</span><span>Railway</span><span>Git</span></div>
+        </div>
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">🛒</div>
+          <h3>Shopify & SEO</h3>
+          <p>Store setup, Google Ads, SEO optimization for real traffic.</p>
+          <div class="skill-tags"><span>Shopify</span><span>SEO</span><span>Google Ads</span></div>
+        </div>
+        <div class="skill-card glass-card tilt-card reveal-up">
+          <div class="skill-icon">🎨</div>
+          <h3>AI Design</h3>
+          <p>AI-powered graphic design — logos, banners, social assets fast.</p>
+          <div class="skill-tags"><span>Midjourney</span><span>Figma</span><span>Canva AI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Selected Work</div>
+        <h2 class="section-title">Projects That<br /><span class="gradient-text">Ship & Convert</span></h2>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="ai">AI Projects</button>
+        <button class="filter-btn" data-filter="shopify">Shopify</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card tilt-card reveal-up" data-cat="ai web">
+          <div class="project-img">
+            <div class="project-mockup pm-1">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-content">
+                <div class="pm-line w70"></div>
+                <div class="pm-line w90"></div>
+                <div class="pm-grid">
+                  <div class="pm-block c1"></div>
+                  <div class="pm-block c2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">AI</span><span class="ptag">Full-Stack</span><span class="ptag">SaaS</span>
+            </div>
+            <h3>CodeDost — AI Coding Tutor</h3>
+            <p>Pakistani AI tutor that explains code bugs in Roman Urdu. JWT auth, MongoDB Atlas, quota management, live on Vercel + Railway.</p>
+            <div class="project-stack">
+              <span>Node.js</span><span>MongoDB</span><span>Claude AI</span><span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://code-dost.vercel.app" target="_blank" class="btn-sm-primary">Live Demo ↗</a>
+              <a href="#" class="btn-sm-ghost">Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card reveal-up" data-cat="web ai">
+          <div class="project-img">
+            <div class="project-mockup pm-2">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-content">
+                <div class="pm-hero-block"></div>
+                <div class="pm-line w60 mt8"></div>
+                <div class="pm-line w80 mt4"></div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">AI</span><span class="ptag">Agri-Tech</span><span class="ptag">Mobile</span>
+            </div>
+            <h3>FasalScan — Crop Disease AI</h3>
+            <p>AI-powered crop disease detection app for Pakistani farmers. Built for MNSUAM Business Ideas Competition — end-to-end product blueprint.</p>
+            <div class="project-stack">
+              <span>Python</span><span>AI Vision</span><span>Android</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm-primary">View Project ↗</a>
+              <a href="#" class="btn-sm-ghost">Pitch Deck</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card reveal-up" data-cat="shopify">
+          <div class="project-img">
+            <div class="project-mockup pm-3">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-content">
+                <div class="pm-product-row">
+                  <div class="pm-product"></div>
+                  <div class="pm-product"></div>
+                  <div class="pm-product"></div>
+                </div>
+                <div class="pm-line w50 mt8"></div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">Shopify</span><span class="ptag">SEO</span><span class="ptag">Ads</span>
+            </div>
+            <h3>E-Commerce SEO & Ads Campaign</h3>
+            <p>Full Shopify store optimization — Google Ads setup, keyword targeting, 1000+ keyword dataset, and conversion-focused SEO structure.</p>
+            <div class="project-stack">
+              <span>Shopify</span><span>Google Ads</span><span>SEO</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm-primary">View Results ↗</a>
+              <a href="#" class="btn-sm-ghost">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card reveal-up" data-cat="web">
+          <div class="project-img">
+            <div class="project-mockup pm-4">
+              <div class="pm-bar"><span></span><span></span><span></span></div>
+              <div class="pm-content">
+                <div class="pm-form">
+                  <div class="pm-field"></div>
+                  <div class="pm-field"></div>
+                  <div class="pm-btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">Full-Stack</span><span class="ptag">Auth</span><span class="ptag">PWA</span>
+            </div>
+            <h3>Full-Stack Auth System + PWA</h3>
+            <p>JWT authentication, email verification, quota management, and PWA conversion with service workers — deployed and production-ready.</p>
+            <div class="project-stack">
+              <span>Node.js</span><span>JWT</span><span>Nodemailer</span><span>PWA</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-sm-primary">Live Demo ↗</a>
+              <a href="#" class="btn-sm-ghost">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Services</div>
+        <h2 class="section-title">What I Build<br /><span class="gradient-text">For You</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card reveal-up">
+          <div class="service-num">01</div>
+          <div class="service-icon">🌐</div>
+          <h3>Business Website</h3>
+          <p>Full custom website — landing page, about, services, contact. Mobile-first, fast, conversion-focused. Your brand, live in 48 hours.</p>
+          <ul class="service-includes">
+            <li>Responsive Design</li>
+            <li>SEO Basics Included</li>
+            <li>Contact Form + Map</li>
+            <li>Hosting + Domain Setup</li>
+          </ul>
+          <a href="#contact" class="service-cta">Get a Website →</a>
+        </div>
+        <div class="service-card glass-card reveal-up featured-service">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-num">02</div>
+          <div class="service-icon">⚡</div>
+          <h3>Full-Stack Web App</h3>
+          <p>Need a real product? Auth, database, APIs, dashboards — I build and deploy complete web apps with AI-enhanced speed.</p>
+          <ul class="service-includes">
+            <li>Frontend + Backend</li>
+            <li>Database & Auth</li>
+            <li>API Integration</li>
+            <li>Deployed & Monitored</li>
+          </ul>
+          <a href="#contact" class="service-cta">Start Building →</a>
+        </div>
+        <div class="service-card glass-card reveal-up">
+          <div class="service-num">03</div>
+          <div class="service-icon">🛒</div>
+          <h3>Shopify & SEO</h3>
+          <p>E-commerce store setup, Google Ads campaigns, SEO optimization — everything to get your store found and converting.</p>
+          <ul class="service-includes">
+            <li>Shopify Store Setup</li>
+            <li>Google Ads Campaigns</li>
+            <li>Keyword Research</li>
+            <li>Performance Tracking</li>
+          </ul>
+          <a href="#contact" class="service-cta">Grow My Store →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ME -->
+  <section class="why-me section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Why Choose Me</div>
+        <h2 class="section-title">The Difference Is<br /><span class="gradient-text">Simple</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">⚡</div>
+          <h4>Fast Delivery</h4>
+          <p>Most projects live in 48–72 hours. No waiting weeks.</p>
+        </div>
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">📱</div>
+          <h4>Mobile-First</h4>
+          <p>Every build is perfect on every device, always.</p>
+        </div>
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">🤖</div>
+          <h4>AI-Powered</h4>
+          <p>AI tools mean more output, less cost, same quality.</p>
+        </div>
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">🔍</div>
+          <h4>SEO-Ready</h4>
+          <p>Built to rank. Clean code, fast load, optimized meta.</p>
+        </div>
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">💬</div>
+          <h4>Clear Comms</h4>
+          <p>Updates every step. No ghosting, no confusion.</p>
+        </div>
+        <div class="why-item glass-card reveal-up">
+          <div class="why-icon">🔒</div>
+          <h4>Result Focused</h4>
+          <p>I don't build pretty. I build what gets you results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">The Process</div>
+        <h2 class="section-title">From Idea to Live<br /><span class="gradient-text">In 4 Steps</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal-up">
+          <div class="step-num">01</div>
+          <div class="step-body glass-card">
+            <div class="step-icon">💬</div>
+            <h4>Requirements</h4>
+            <p>Quick call or message. You explain, I listen, I clarify. Done in 30 minutes.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal-up">
+          <div class="step-num">02</div>
+          <div class="step-body glass-card">
+            <div class="step-icon">⚡</div>
+            <h4>Build</h4>
+            <p>I execute immediately using AI workflows and proven methods. No delay.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal-up">
+          <div class="step-num">03</div>
+          <div class="step-body glass-card">
+            <div class="step-icon">🔧</div>
+            <h4>Refine</h4>
+            <p>Your feedback loop. Two rounds of revisions until it's exactly right.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal-up">
+          <div class="step-num">04</div>
+          <div class="step-body glass-card">
+            <div class="step-icon">🚀</div>
+            <h4>Launch</h4>
+            <p>Deployed, live, monitored. Your product is out in the world, converting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner reveal">
+      <h2 class="cta-title">Let's Build Your Website<br /><span class="gradient-text">& Go Live Fast.</span></h2>
+      <p class="cta-sub">An idea sitting in your head is costing you money. Let's fix that.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-primary btn-lg">
+          <span>Start a Project</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:sheeraz@example.com" class="btn-ghost">Or Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title">Ready to<br /><span class="gradient-text">Launch?</span></h2>
+          <p class="contact-desc">Tell me about your project. I'll get back to you within a few hours — not days.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <div class="ci-label">Email</div>
+                <a href="mailto:sheeraz@example.com" class="ci-value">sheeraz@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <div class="ci-label">Location</div>
+                <span class="ci-value">Kabirwala, Punjab, Pakistan</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">⏱</span>
+              <div>
+                <div class="ci-label">Response Time</div>
+                <span class="ci-value">Within a few hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <div class="contact-form glass-card">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Smith" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@company.com" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Project Type</label>
+              <select class="form-input">
+                <option value="">Select a service...</option>
+                <option>Business Website (48h)</option>
+                <option>Full-Stack Web App</option>
+                <option>Shopify & SEO</option>
+                <option>Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tell Me About Your Project</label>
+              <textarea placeholder="Describe your idea, goals, and timeline..." class="form-input form-textarea"></textarea>
+            </div>
+            <button class="btn-primary btn-full" id="submitBtn">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Sheraz<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">Built fast. Shipped clean. © 2025 Muhammad Sheeraz. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
