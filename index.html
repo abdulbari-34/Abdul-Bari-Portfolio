@@ -561,13 +561,13 @@
         <div class="contact-left reveal-left">
           <div class="section-tag">Contact</div>
           <h2 class="section-title">Ready to<br /><span class="gradient-text">Launch?</span></h2>
-          <p class="contact-desc">Tell me about your project. I'll get back to you within a few hours — not days.</p>
+          <p class="contact-desc">Tell me about your project. I'll get back to you within a few minutes — not hours.</p>
           <div class="contact-items">
             <div class="contact-item">
               <span class="contact-icon">📧</span>
               <div>
                 <div class="ci-label">Email</div>
-                <a href="mailto:Abdul Bari@example.com" class="ci-value">Abdul Bari@example.com</a>
+                <a href="mailto:nwababdulbaripuna@gmail.com" class="ci-value">nwababdulbaripuna@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
@@ -581,24 +581,24 @@
               <span class="contact-icon">⏱</span>
               <div>
                 <div class="ci-label">Response Time</div>
-                <span class="ci-value">Within a few hours</span>
+                <span class="ci-value">Within a few minutes</span>
               </div>
             </div>
           </div>
         </div>
         <div class="contact-right reveal-right">
-          <div class="contact-form glass-card">
+          <form class="contact-form glass-card" action="https://formspree.io/f/xaqlpzdv" method="POST">
             <div class="form-group">
               <label>Your Name</label>
-              <input type="text" placeholder="John Smith" class="form-input" />
+              <input type="text" name="name" placeholder="John Smith" class="form-input" required />
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" placeholder="john@company.com" class="form-input" />
+              <input type="email" name="email" placeholder="john@company.com" class="form-input" required />
             </div>
             <div class="form-group">
               <label>Project Type</label>
-              <select class="form-input">
+              <select name="project_type" class="form-input">
                 <option value="">Select a service...</option>
                 <option>Business Website (48h)</option>
                 <option>Full-Stack Web App</option>
@@ -608,13 +608,13 @@
             </div>
             <div class="form-group">
               <label>Tell Me About Your Project</label>
-              <textarea placeholder="Describe your idea, goals, and timeline..." class="form-input form-textarea"></textarea>
+              <textarea name="message" placeholder="Describe your idea, goals, and timeline..." class="form-input form-textarea" required></textarea>
             </div>
-            <button class="btn-primary btn-full" id="submitBtn">
+            <button type="submit" class="btn-primary btn-full">
               <span>Send Message</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
